@@ -1,6 +1,6 @@
 # spring-cloud-demo
 spring cloud 学习笔记
-### 自动更新配置中心的值
+### 手动更新配置中心的值
 1. 添加actuator依赖
 ```xml
 <dependency>
@@ -27,3 +27,6 @@ management:
     "dev-id"
 ]
 ```
+### 手动更新配置中心的值
+在手动更新配置的基础上
+1.
