@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="asdasdasd" />
+        <module name="consul-client" />
+        <module name="demo2" />
+        <module name="eureka-client" />
+        <module name="eureka-config-client" />
+        <module name="eureka-config-server" />
+        <module name="eureka-consumer" />
+        <module name="eureka-consumer-feign" />
+        <module name="eureka-consumer-ribbon" />
+        <module name="eureka-server" />
+        <module name="eurekaconfigservergit" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="asdasdasd" target="1.8" />
+      <module name="consul-client" target="1.8" />
+      <module name="demo2" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-config-client" target="1.8" />
+      <module name="eureka-config-server" target="1.8" />
+      <module name="eureka-config-server-git" target="1.8" />
+      <module name="eureka-consumer" target="1.8" />
+      <module name="eureka-consumer-feign" target="1.8" />
+      <module name="eureka-consumer-ribbon" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="eurekaconfigservergit" target="1.8" />
+      <module name="spring-cloud-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

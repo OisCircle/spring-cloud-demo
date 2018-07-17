@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/OisCircle/Test-SpringCloud-Config/
+          username: OisCircle
+          password: Qcq793414670
+server:
+  port: 1005
