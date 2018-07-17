@@ -32,3 +32,4 @@ management:
 >1.在GitHubSettings上添加webhook  
 >2.填写目标地址http://xx.xx.xx.xx/actuator/refresh  
 >3.启动webhook  
+- 目前使用webhook遇到严重问题，refresh接口不支持表单和其它内容，但是webhook发送post请求的时候自动添加了其它东西，导致错误
