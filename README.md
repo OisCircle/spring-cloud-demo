@@ -8,7 +8,10 @@ spring cloud 学习笔记
   <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
-2. 在使用@Value("xxx")的类上面@RefreshScope
+2. 在使用@Value("xxx")的类上面
+```java
+@RefreshScope
+```
 3. 在yml(配置文件)里面添加如下信息
 ```yaml
 management:
