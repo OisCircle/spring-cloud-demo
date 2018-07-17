@@ -28,5 +28,7 @@ management:
 ]
 ```
 ### 手动更新配置中心的值
-在手动更新配置的基础上
-1.
+- 在手动更新配置的基础上  
+>1.在GitHubSettings上添加webhook  
+>2.填写目标地址http://xx.xx.xx.xx/actuator/refresh  
+>3.启动webhook  
