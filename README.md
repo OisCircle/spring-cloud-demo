@@ -50,8 +50,8 @@ feign:
 > 3.实现声明好的fallback接口,注册为bean
 ```java
 @Component
-- 意外情况:一次调用fallback一次不调用fallback,循环往复,重启之后就没事了
 ```
+- 意外情况:一次调用fallback一次不调用fallback,循环往复,重启之后就没事了
 #### ribbon使用hystrix  
 > 1.由于feign已经整合好了hystrix的依赖，所以不用导入hystrix依赖  
 > 2.需要用到在主程序上@EnableHystrix  
