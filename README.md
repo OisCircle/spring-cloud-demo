@@ -47,7 +47,10 @@ feign:
 ```java
 @FeignClient(value = "eureka-client",fallback = FeignFallback.class)
 ```
-> 3.实现声明好的fallback接口
+> 3.实现声明好的fallback接口,注册为bean
+```java
+@Component
+```
 - ribbon使用hystrix  
 > 1.由于feign已经整合好了hystrix的依赖，所以不用导入hystrix依赖  
 > 2.需要用到在主程序上@EnableHystrix  
