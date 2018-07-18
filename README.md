@@ -36,7 +36,7 @@ management:
 
 ### Hystrix使用的坑
 > hystrix主要用途是服务崩溃的时候调用fallbcak方法(服务降级)  
-- feign使用hystrix  
+#### feign使用hystrix  
 > 1.只需要在配置文件中配置  
 ```yaml
 feign:
@@ -50,8 +50,9 @@ feign:
 > 3.实现声明好的fallback接口,注册为bean
 ```java
 @Component
+- 意外情况:一次调用fallback一次不调用fallback,循环往复,重启之后就没事了
 ```
-- ribbon使用hystrix  
+#### ribbon使用hystrix  
 > 1.由于feign已经整合好了hystrix的依赖，所以不用导入hystrix依赖  
 > 2.需要用到在主程序上@EnableHystrix  
 > 3.需要在服务层的方法上面@HystrixCommand(fallback="xxxMethod")  
