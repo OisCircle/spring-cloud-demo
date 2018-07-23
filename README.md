@@ -37,7 +37,8 @@ management:
 ### Hystrix使用的坑
 > hystrix主要用途是服务崩溃的时候调用fallbcak方法(服务降级)  
 #### feign使用hystrix  
-> 1.只需要在配置文件中配置  
+> 1.由于feign已经整合好了hystrix的依赖，所以不用导入hystrix依赖  
+只需要在配置文件中配置  
 ```yaml
 feign:
   hystrix:
