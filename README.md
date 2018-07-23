@@ -55,7 +55,7 @@ feign:
 - 意外情况:一次调用fallback一次不调用fallback,循环往复
 - 原因:注册了两个同名的服务,使用了feign调用,负载均衡算法一次调用一个,所以一个成功,一个失败
 #### ribbon使用hystrix  
-> 1.由于feign已经整合好了hystrix的依赖，所以不用导入hystrix依赖  
+> 1.导入hystrix依赖  
 > 2.需要用到在主程序上@EnableHystrix  
 > 3.需要在服务层的方法上面@HystrixCommand(fallback="xxxMethod")  
 > 4....
