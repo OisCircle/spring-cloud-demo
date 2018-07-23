@@ -1,15 +1,27 @@
 spring:
   application:
-    name: eureka-client
+    name: eureka-config-client
   cloud:
     config:
       uri: http://localhost:1005/
       profile: dev
       label: master
-server:
-  port: 1006
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
+#下面的配置已经放在github上面
+#server:
+#  port: 1006
+#与actuator监控模块相关的配置，当配置修改的时候，访问localhost:1006/actuator/refresh，即可刷新配置
+#例子：
+#[
+#    "config.client.version",
+#    "dev-id"
+#]
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:1000/eureka/

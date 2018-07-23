@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-consumer-feign
+  cloud:
+    config:
+      uri: http://localhost:1005/
+      profile: dev
+      label: master
+server:
+  port: 1004
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+feign:
+  hystrix:
+    enabled: true
+#以上配置如果放在配置中心会报错

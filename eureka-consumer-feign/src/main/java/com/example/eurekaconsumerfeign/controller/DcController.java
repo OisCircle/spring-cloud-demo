@@ -11,11 +11,11 @@ import org.springframework.web.multipart.MultipartFile;
 //feign调用
 @RestController
 public class DcController {
-	@Autowired(required = false)
+	@Autowired
 	EurekaClient eurekaClient;
 
 	@GetMapping("/consumer")
-	public String dc() {
+	public String dc() throws Exception{
 		return eurekaClient.consumer();
 	}
 
@@ -24,4 +24,5 @@ public class DcController {
 		System.out.println("aaaaa");
 		return eurekaClient.uploadFile(file);
 	}
+
 }

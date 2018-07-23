@@ -11,22 +11,22 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 public class DcController {
-    @Autowired
-    DiscoveryClient discoveryClient;
+	@Autowired
+	DiscoveryClient discoveryClient;
 
-    @GetMapping("/dc")
-    public String dc() {
-        String services = "Services: " + discoveryClient.getServices();
-        System.out.println(services);
-        return services;
-    }
+	@GetMapping("/dc")
+	public String dc() throws InterruptedException{
+		String services = "Services: " + discoveryClient.getServices();
+		System.out.println(services);
+		return services;
+	}
 
-    @PostMapping(value = "/uploadFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public String handleFileUpload(@RequestPart(value = "file") MultipartFile file) {
-	    System.out.println("bbbbb");
-	    System.out.println(file.getOriginalFilename());
-	    System.out.println(file.getContentType());
-        return file.getName();
-    }
+	@PostMapping(value = "/uploadFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+	public String handleFileUpload(@RequestPart(value = "file") MultipartFile file) {
+		System.out.println("bbbbb");
+		System.out.println(file.getOriginalFilename());
+		System.out.println(file.getContentType());
+		return file.getName();
+	}
 
 }

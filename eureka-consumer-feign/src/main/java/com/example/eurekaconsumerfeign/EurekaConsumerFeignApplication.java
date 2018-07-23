@@ -8,16 +8,17 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
+import java.util.concurrent.TimeUnit;
+
 @EnableDiscoveryClient
 @EnableFeignClients
 @SpringBootApplication
 public class EurekaConsumerFeignApplication {
-	//文件上传需要加载的bean
+	//feign文件上传需要加载的bean
 	@Bean
 	public Encoder feignFormEncoder() {
 		return new SpringFormEncoder();
 	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaConsumerFeignApplication.class, args);
 	}
